@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Plex Media Server startup script
+#
+
+# Must have environment variables
+export HOME=/var/lib/plexmediaserver
+export PWD=$HOME
+export TERM=xterm
+
+# Start Plex Media Server
+/usr/sbin/start_pms
+

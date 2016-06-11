@@ -1,0 +1,10 @@
+/etc/plex/.cache/acd_cli/*.log
+{
+	rotate 3
+	daily
+	missingok
+	notifempty
+	delaycompress
+	compress
+}
+

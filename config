@@ -1,0 +1,15 @@
+# Name of the image to upload to the docker registry
+imgname="plexmediaserver"
+
+# Files that need to be copied for the build
+src_dirs="plexmediaserver/files"
+
+# Additional tags to apply to the generated image
+extra_tags="latest"
+
+# List of Dockerfiles required to generate the image
+dockerfiles="plexmediaserver/Dockerfile"
+
+# Additional registries to push to
+extra_registry=""
+
