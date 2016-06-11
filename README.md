@@ -1,6 +1,3 @@
-## Supported Tags
-`1.0.0-1`, `latest` ([Dockerfile](https://github.com/TheJoshHogle/docker-images-plexmediaserver/tree/master))
-
 ## Plex Media Server
 This is an image for running your own [Plex Media Server](http://plex.tv).  Because it's built on top of [ecloudfs](https://hub.docker.com/r/joshhogle/ecloudfs), you have the option of storing media locally on the host or by utilizing a supported cloud service.  You also have the option to encrypt media.  This can be used to prevent a cloud provider from actually seeing what media you have stored on their service.
 
