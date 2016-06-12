@@ -24,7 +24,7 @@ If this is the first time you are running the server, you'll need to trick the c
 5. Connect to the container and use **socat** to redirect port 8080 to port 32400.
   - `host# docker exec -t -i plex /bin/bash`
   - `container# socat TCP-LISTEN:8080,fork TCP:127.0.0.1:32400`
-6. Open a web browser and navigate to **http://host:8080/web**, accept the license agreement and claim the server by logging into your Plex account.
+6. Open a web browser and navigate to **http://host:8080/web** (where **host** is the actual name of your host), accept the license agreement and claim the server by logging into your Plex account.
 7. Navigate to **Remote Access** under **Settings** and click the **Show Advanced** button to reveal the port mapping for remote access.
   a. Check **Manually specify public port** and set the value to **8080**.
   b. Click **Apply**.  The server should become publicly accessible.
@@ -86,7 +86,7 @@ OPTIONS="--privileged"
 #
 VOLUMES="/opt/docker/plex/data:/var/lib/plexmediaserver /opt/docker/plex/mount.d:/etc/mount.d /opt/docker/plex/acd:/var/lib/acd /opt/docker/plex/gdrive:/var/lib/gdrive /mnt/data/public:/mnt/local/public /mnt/data/private:/mnt/local/.private"
 ~~~~
-You can use this file as-is.  If you want to mount local folders within the container, you will need to adjust the **VOLUMES** value appropriately.  Please make sure you refer to the **ecloudfs** documentation for this.
+You can use this file as-is.  The **VOLUMES** shown above contain the required volume mounts for both this container as well as the **ecloudfs** container.  If you want to mount additional local folders within the container, you will need to adjust the **VOLUMES** value appropriately.  Please make sure you refer to the **ecloudfs** documentation for additional information on configuring volume mappings.
 
 ## Backing Up Plex
 Once you have configured Plex per the instructions above, you simply need to backup the **/opt/docker/plex** folder and subfolders to save your Plex configuration.  You should also back up any host folders in which you are storing  media files.
