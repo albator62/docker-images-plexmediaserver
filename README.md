@@ -19,6 +19,7 @@ If this is the first time you are running the server, you'll need to trick the c
 2. Download the **run-container** script (see **What You Need** above) and store it in the **/opt/docker** folder.  Make sure to make the script executable.
   - `host# chmod +x /opt/docker/run-container`
 3. Create a new file called **container.conf** inside the **/opt/docker/plex** folder.  The format is shown below in the **Container Configuration File Format**.
+  - For the initial setup, do **not** map port 32400 to port 8080.  Instead map port 8080 to itself.
 4. Create and start the container.
   - `host# /opt/docker/run-container plex`
 5. Connect to the container and use **socat** to redirect port 8080 to port 32400.
@@ -30,8 +31,9 @@ If this is the first time you are running the server, you'll need to trick the c
   b. Click **Apply**.  The server should become publicly accessible.
 8. Once you have claimed the server, use **CTRL+C** to stop **socat** and exit from the container.
   - `container# exit`
-9. Follow the directions from the [ecloudfs](https://hub.docker.com/r/joshhogle/ecloudfs) image for mounting folders for storing media inside the container.
-10. Re-create and start the container.
+9. Update the container configuration to map port 32400 to port 8080.
+10. Follow the directions from the [ecloudfs](https://hub.docker.com/r/joshhogle/ecloudfs) image for mounting folders for storing media inside the container.
+11. Re-create and start the container.
   - `host# /opt/docker/run-container plex`
 
 You should now be able to connect to your Plex server from the main Plex application online at http://plex.tv.
