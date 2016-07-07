@@ -1,3 +1,9 @@
+# Hostname for the repository
+docker_host="docker.io"
+
+# Namespace of the image, if any
+namespace="joshhogle"
+
 # Name of the image to upload to the docker registry
 imgname="plexmediaserver"
 
@@ -10,6 +16,6 @@ extra_tags="latest"
 # List of Dockerfiles required to generate the image
 dockerfiles="plexmediaserver/Dockerfile"
 
-# Additional registries to push to
-extra_registry=""
+# Base image to pull from
+image_from="docker.io/joshhogle/ecloudfs:latest"
 

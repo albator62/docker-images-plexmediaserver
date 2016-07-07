@@ -78,6 +78,9 @@ You can use this file as-is.  The **VOLUMES** shown above contain the required v
 Once you have configured Plex per the instructions above, you simply need to backup the **/opt/docker/plex** folder and subfolders to save your Plex configuration.  You should also back up any host folders in which you are storing  media files.
 
 #### Version / Tag History
+**1.2.0-1**: _(Released July 6, 2016)_
+- Plex Media Server v1.0.0.2261-a17e99e (Released June 23, 2016)
+
 **1.1.0-1**: _(Released June 13, 2016)_
 - Updated to new **ecloudfs** base image which supports Google Drive
 

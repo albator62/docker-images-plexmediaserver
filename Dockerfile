@@ -1,11 +1,11 @@
 #
 # Docker configuration for Plex Media server
 #
-FROM joshhogle/ecloudfs:latest
+FROM ${image_from}
 MAINTAINER Josh Hogle <josh.hogle@gmail.com>
 
 # Versions
-ENV PLEX_VERSION 0.9.16.6.1993-5089475
+ENV PLEX_VERSION 1.0.0.2261-a17e99e
 
 # Upgrade packages and install required packages for build
 RUN \
